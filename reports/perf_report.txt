@@ -1,0 +1,682 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 171K of event 'cpu-clock:pppH'
+# Event count (approx.): 42808250000
+#
+# Children      Self  Command          Shared Object        Symbol                                                                                                                                                                    
+# ........  ........  ...............  ...................  ..........................................................................................................................................................................
+#
+    98.02%     0.00%  csr_multiplicat  libc-2.31.so         [.] __libc_start_main
+            |
+            ---__libc_start_main
+               |          
+                --98.02%--main
+                          |          
+                          |--78.31%--multiplyCSR
+                          |          |          
+                          |          |--14.93%--std::vector<int, std::allocator<int> >::operator[]
+                          |          |          
+                          |          |--6.65%--std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+                          |          |          
+                          |          |--5.44%--std::vector<int, std::allocator<int> >::operator[]
+                          |          |          
+                          |          |--5.33%--std::vector<int, std::allocator<int> >::size
+                          |          |          
+                          |           --1.23%--std::vector<int, std::allocator<int> >::push_back
+                          |                     |          
+                          |                      --0.70%--std::allocator_traits<std::allocator<int> >::construct<int, int const&>
+                          |          
+                          |--9.58%--std::vector<int, std::allocator<int> >::operator[]
+                          |          
+                          |--3.22%--std::vector<int, std::allocator<int> >::size
+                          |          
+                          |--2.79%--std::vector<int, std::allocator<int> >::operator[]
+                          |          
+                          |--2.72%--std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+                          |          
+                           --1.17%--readCSRMatrix
+                                     |          
+                                      --0.62%--std::vector<int, std::allocator<int> >::push_back
+
+    98.02%     0.00%  csr_multiplicat  csr_multiplication   [.] main
+            |
+            ---main
+               |          
+               |--78.31%--multiplyCSR
+               |          |          
+               |          |--14.93%--std::vector<int, std::allocator<int> >::operator[]
+               |          |          
+               |          |--6.65%--std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+               |          |          
+               |          |--5.44%--std::vector<int, std::allocator<int> >::operator[]
+               |          |          
+               |          |--5.33%--std::vector<int, std::allocator<int> >::size
+               |          |          
+               |           --1.23%--std::vector<int, std::allocator<int> >::push_back
+               |                     |          
+               |                      --0.70%--std::allocator_traits<std::allocator<int> >::construct<int, int const&>
+               |          
+               |--9.58%--std::vector<int, std::allocator<int> >::operator[]
+               |          
+               |--3.22%--std::vector<int, std::allocator<int> >::size
+               |          
+               |--2.79%--std::vector<int, std::allocator<int> >::operator[]
+               |          
+               |--2.72%--std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+               |          
+                --1.17%--readCSRMatrix
+                          |          
+                           --0.62%--std::vector<int, std::allocator<int> >::push_back
+
+    78.31%    44.28%  csr_multiplicat  csr_multiplication   [.] multiplyCSR
+            |          
+            |--44.28%--__libc_start_main
+            |          main
+            |          multiplyCSR
+            |          
+             --34.02%--multiplyCSR
+                       |          
+                       |--14.93%--std::vector<int, std::allocator<int> >::operator[]
+                       |          
+                       |--6.65%--std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+                       |          
+                       |--5.44%--std::vector<int, std::allocator<int> >::operator[]
+                       |          
+                       |--5.33%--std::vector<int, std::allocator<int> >::size
+                       |          
+                        --1.23%--std::vector<int, std::allocator<int> >::push_back
+                                  |          
+                                   --0.70%--std::allocator_traits<std::allocator<int> >::construct<int, int const&>
+
+    24.52%    24.51%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::operator[]
+            |          
+             --24.51%--__libc_start_main
+                       main
+                       |          
+                       |--14.93%--multiplyCSR
+                       |          std::vector<int, std::allocator<int> >::operator[]
+                       |          
+                        --9.58%--std::vector<int, std::allocator<int> >::operator[]
+
+     9.38%     9.37%  csr_multiplicat  csr_multiplication   [.] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+            |          
+             --9.37%--__libc_start_main
+                       main
+                       |          
+                       |--6.65%--multiplyCSR
+                       |          std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+                       |          
+                        --2.72%--std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[]
+
+     8.54%     8.54%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::size
+            |          
+             --8.54%--__libc_start_main
+                       main
+                       |          
+                       |--5.33%--multiplyCSR
+                       |          std::vector<int, std::allocator<int> >::size
+                       |          
+                        --3.21%--std::vector<int, std::allocator<int> >::size
+
+     8.23%     8.23%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::operator[]
+            |          
+             --8.23%--__libc_start_main
+                       main
+                       |          
+                       |--5.44%--multiplyCSR
+                       |          std::vector<int, std::allocator<int> >::operator[]
+                       |          
+                        --2.79%--std::vector<int, std::allocator<int> >::operator[]
+
+     1.93%     0.40%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::push_back
+            |          
+             --1.53%--std::vector<int, std::allocator<int> >::push_back
+                       |          
+                        --1.08%--std::allocator_traits<std::allocator<int> >::construct<int, int const&>
+                                  |          
+                                   --0.79%--__gnu_cxx::new_allocator<int>::construct<int, int const&>
+
+     1.32%     1.32%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>
+            |          
+             --1.23%--0x48fd8948550010cd
+                       std::__numpunct_cache<char>::~__numpunct_cache
+                       0x1
+                       std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>
+
+     1.31%     0.00%  csr_multiplicat  [unknown]            [.] 0x48fd8948550010cd
+            |
+            ---0x48fd8948550010cd
+               std::__numpunct_cache<char>::~__numpunct_cache
+               0x1
+               |          
+                --1.23%--std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>
+
+     1.31%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::__numpunct_cache<char>::~__numpunct_cache
+            |
+            ---std::__numpunct_cache<char>::~__numpunct_cache
+               0x1
+               |          
+                --1.23%--std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>
+
+     1.31%     0.00%  csr_multiplicat  [unknown]            [.] 0x0000000000000001
+            |
+            ---0x1
+               |          
+                --1.23%--std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>
+
+     1.17%     0.11%  csr_multiplicat  csr_multiplication   [.] readCSRMatrix
+            |          
+             --1.06%--readCSRMatrix
+                       |          
+                        --0.62%--std::vector<int, std::allocator<int> >::push_back
+
+     1.15%     0.23%  csr_multiplicat  csr_multiplication   [.] std::allocator_traits<std::allocator<int> >::construct<int, int const&>
+            |          
+             --0.92%--std::allocator_traits<std::allocator<int> >::construct<int, int const&>
+                       |          
+                        --0.79%--__gnu_cxx::new_allocator<int>::construct<int, int const&>
+
+     0.84%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               exc_page_fault
+               |          
+                --0.83%--do_user_addr_fault
+                          |          
+                           --0.52%--handle_mm_fault
+                                     |          
+                                      --0.50%--__handle_mm_fault
+
+     0.84%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] exc_page_fault
+            |
+            ---exc_page_fault
+               |          
+                --0.83%--do_user_addr_fault
+                          |          
+                           --0.52%--handle_mm_fault
+                                     |          
+                                      --0.50%--__handle_mm_fault
+
+     0.83%     0.31%  csr_multiplicat  [kernel.kallsyms]    [k] do_user_addr_fault
+            |          
+             --0.53%--do_user_addr_fault
+                       |          
+                        --0.52%--handle_mm_fault
+                                  |          
+                                   --0.50%--__handle_mm_fault
+
+     0.83%     0.47%  csr_multiplicat  csr_multiplication   [.] __gnu_cxx::new_allocator<int>::construct<int, int const&>
+     0.52%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4963
+            |
+            ---0x7f7aeabf4963
+
+     0.52%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] handle_mm_fault
+            |          
+             --0.51%--handle_mm_fault
+                       |          
+                        --0.50%--__handle_mm_fault
+
+     0.50%     0.02%  csr_multiplicat  [kernel.kallsyms]    [k] __handle_mm_fault
+     0.47%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_anonymous_page
+     0.38%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] alloc_pages_vma
+     0.38%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] __alloc_pages
+     0.37%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] get_page_from_freelist
+     0.37%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::_S_relocate
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::_S_do_relocate
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__relocate_a<int*, int*, std::allocator<int> >
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::vector
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, int*, int>
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::uninitialized_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, int*>
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, int*>
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, int*>
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, int*>
+     0.36%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__copy_move_a<false, int const*, int*>
+     0.35%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] prep_new_page
+     0.34%     0.34%  csr_multiplicat  [kernel.kallsyms]    [k] clear_page_erms
+     0.30%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c24
+     0.30%     0.30%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::istream::sentry::sentry
+     0.28%     0.00%  csr_multiplicat  [unknown]            [.] 0x0af40000007ffc1e
+     0.22%     0.22%  csr_multiplicat  csr_multiplication   [.] std::forward<int const&>
+     0.17%     0.17%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::istream::operator>>
+     0.16%     0.16%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018b963
+     0.14%     0.14%  csr_multiplicat  csr_multiplication   [.] operator new
+     0.12%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] entry_SYSCALL_64_after_hwframe
+     0.12%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_syscall_64
+     0.11%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] x64_sys_call
+     0.08%     0.08%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::basic_ios<char, std::char_traits<char> >::operator bool
+     0.07%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector
+     0.07%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize
+     0.07%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >
+     0.07%     0.00%  csr_multiplicat  csr_multiplication   [.] std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >
+     0.07%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >
+     0.07%     0.00%  csr_multiplicat  csr_multiplication   [.] std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>
+     0.07%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __do_munmap
+     0.07%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] unmap_region
+     0.06%     0.06%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc24
+     0.06%     0.00%  csr_multiplicat  [unknown]            [k] 0x203a73656369646e
+     0.06%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4ca2
+     0.06%     0.00%  csr_multiplicat  [unknown]            [.] 0x48fb894853000cc4
+     0.06%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::basic_filebuf<char, std::char_traits<char> >::~basic_filebuf
+     0.06%     0.00%  csr_multiplicat  [unknown]            [.] 0x000055c400fc40d0
+     0.05%     0.00%  csr_multiplicat  libc-2.31.so         [.] __munmap
+     0.05%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __x64_sys_munmap
+     0.05%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __vm_munmap
+     0.05%     0.00%  csr_multiplicat  libc-2.31.so         [.] read
+     0.05%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] zap_pte_range.isra.0
+     0.05%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] unmap_vmas
+     0.05%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] unmap_single_vma
+     0.05%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] unmap_page_range
+     0.05%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] release_pages
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tlb_flush_mmu
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] free_pages_and_swap_cache
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __x64_sys_read
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ksys_read
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] vfs_read
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] filemap_read
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] new_sync_read
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ext4_file_read_iter
+     0.04%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] generic_file_read_iter
+     0.04%     0.04%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::do_get
+     0.04%     0.00%  csr_multiplicat  csr_multiplication   [.] std::_Vector_base<int, std::allocator<int> >::_M_deallocate
+     0.04%     0.00%  csr_multiplicat  csr_multiplication   [.] std::allocator_traits<std::allocator<int> >::deallocate
+     0.03%     0.00%  csr_multiplicat  csr_multiplication   [.] std::vector<int, std::allocator<int> >::~vector
+     0.03%     0.00%  csr_multiplicat  csr_multiplication   [.] std::_Vector_base<int, std::allocator<int> >::~_Vector_base
+     0.03%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] copy_page_to_iter
+     0.03%     0.03%  csr_multiplicat  [kernel.kallsyms]    [k] __lock_text_start
+     0.03%     0.03%  csr_multiplicat  [kernel.kallsyms]    [k] copy_user_enhanced_fast_string
+     0.03%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __mem_cgroup_charge
+     0.03%     0.03%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bbee
+     0.03%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4bee
+     0.02%     0.00%  csr_multiplicat  [unknown]            [.] 0000000000000000
+     0.02%     0.02%  csr_multiplicat  [kernel.kallsyms]    [k] charge_memcg
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] asm_sysvec_apic_timer_interrupt
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] sysvec_apic_timer_interrupt
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] irq_exit_rcu
+     0.02%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] handle_softirqs
+     0.02%     0.00%  csr_multiplicat  libc-2.31.so         [.] brk
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] lru_cache_add_inactive_or_unevictable
+     0.02%     0.02%  csr_multiplicat  [kernel.kallsyms]    [k] free_unref_page_list
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] lru_cache_add
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __x64_sys_brk
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tlb_finish_mmu
+     0.02%     0.02%  csr_multiplicat  [kernel.kallsyms]    [k] rmqueue
+     0.02%     0.00%  csr_multiplicat  csr_multiplication   [.] CSRMatrix::~CSRMatrix
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __pagevec_lru_add
+     0.02%     0.02%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::locale::id::_M_id
+     0.02%     0.02%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bbf5
+     0.02%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4bf5
+     0.02%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __mod_lruvec_page_state
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000125291
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b291
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000125280
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b280
+     0.01%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] page_add_new_anon_rmap
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x000000000012529d
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b29d
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x000000000009bf10
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e8b
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ec7
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead11f10
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce8b
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cec7
+     0.01%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] page_remove_rmap
+     0.01%     0.01%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bca2
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x000000000009b4d0
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead114d0
+     0.01%     0.00%  csr_multiplicat  [unknown]            [k] 0x2036203631203631
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f35
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ebc
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cebc
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf35
+     0.01%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeab0173c
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e84
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce84
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000125288
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e96
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126eb2
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b288
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce96
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ceb2
+     0.01%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __mod_lruvec_state
+     0.01%     0.01%  csr_multiplicat  csr_multiplication   [.] 0x0000000000002454
+     0.01%     0.00%  csr_multiplicat  csr_multiplication   [.] 0x000055c3e2e49454
+     0.01%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] __cgroup_throttle_swaprate
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f43
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf43
+     0.01%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] run_timer_softirq
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00000000001252ab
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f5d
+     0.01%     0.00%  csr_multiplicat  [unknown]            [.] 0x0000393837363534
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ea5
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b2ab
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cea5
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf5d
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00000000001252b9
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b2b9
+     0.01%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] try_charge_memcg
+     0.01%     0.01%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc7a
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x000000000009d664
+     0.01%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c7a
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead13664
+     0.01%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] run_rebalance_domains
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ed0
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ced0
+     0.01%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __mod_memcg_lruvec_state
+     0.01%     0.01%  csr_multiplicat  [kernel.kallsyms]    [k] _raw_spin_lock
+     0.01%     0.01%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc08
+     0.01%     0.01%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f54
+     0.01%     0.00%  csr_multiplicat  [unknown]            [.] 0x3120393120322038
+     0.01%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c08
+     0.01%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf54
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] free_pcp_prepare
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] down_read_trylock
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pmd_val
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] filemap_get_pages
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc16
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c16
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __mod_node_page_state
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] get_mem_cgroup_from_mm
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] _find_first_bit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] asm_common_interrupt
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] filemap_get_read_batch
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] common_interrupt
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] exit_to_user_mode_prepare
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] irqentry_exit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] irqentry_exit_to_user_mode
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] finish_task_switch
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] update_blocked_averages
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c29
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] schedule
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __sched_text_start
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126eb7
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ec2
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ceb7
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cec2
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __page_set_anon_rmap
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] policy_nodemask
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pmd_pfn
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __raw_callee_save___pv_queued_spin_unlock
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pud_val
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] call_timer_fn
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] up_read
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeab0037a
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc29
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] syscall_enter_from_user_mode
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] queued_spin_unlock
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] cgroup_rstat_updated
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pfn_pte
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] load_balance
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tcp_orphan_update
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00000000001252af
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00000000001252b4
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x41e589480000b274
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x00007f7aeae7ec4b
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e9d
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000009873c
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126eac
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b2af
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b2b4
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce9d
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ceac
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] uncharge_page
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] rcu_read_unlock_strict
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] kernel_init_free_pages.part.0
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] mem_cgroup_from_task
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __cond_resched
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] blk_done_softirq
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] scsi_complete
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x0000000000096a59
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __mem_cgroup_uncharge_list
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x00007f7aeae6653a
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeaaffa59
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] free_unref_page_prepare.part.0
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] xas_load
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] free_swap_cache
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] find_vma
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bbfe
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tcp_orphan_count_sum
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] blk_complete_reqs
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc81
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bca7
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] scsi_finish_command
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __pte_alloc
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] scsi_io_completion
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pte_alloc_one
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] scsi_end_request
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] alloc_pages
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e80
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e87
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126e8f
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126eca
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f30
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f3b
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] rebalance_domains
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::__basic_file<char>::xsgetn
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pmd_page_vaddr
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ed5
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4bfe
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c81
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4ca7
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce80
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce87
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ce8f
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ceca
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9ced5
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf30
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf3b
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] virtqueue_add_outbuf
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] page_counter_try_charge
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] unlock_page_memcg
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] sync_mm_rss
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] bio_free
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] lock_page_lruvec_irqsave
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] napi_skb_cache_get
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] xas_descend
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__niter_base<int*>
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tcp_keepalive_timer
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3232203438362032
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] get_task_policy.part.0
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tcp_write_wakeup
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3220313132312039
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] __gnu_cxx::new_allocator<int>::new_allocator
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::__miter_base<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > > >
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tcp_xmit_probe_skb
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2031363533203734
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2032323834203131
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2032393034203631
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2033203231203631
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2034312034203631
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2034333032203235
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2034342038393220
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2035203731203720
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2036203320303220
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2036312034312039
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2037312039203331
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2037313820383131
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2037393320383138
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2038363731203635
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2039203320383120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2039313731203832
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3032203220363120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3032203430353220
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3039343320383731
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120332033203720
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120343436332033
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120362030312035
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120373120312035
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120373439203135
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120393737342034
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3131203420323120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3134203538313220
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3220303030322034
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3220353534332031
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3220353732332032
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3220363237312033
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3232203935363120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3233332035303534
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3320323235332036
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3320393930312035
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3338373220373433
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3420303030342032
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3431393420323235
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3433312035353320
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3434203637343420
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3436362033303320
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3439203233383320
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3531203131203420
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3534392036303820
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3537203335313120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3620382037203720
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3630313420363639
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3632203331353220
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3636342037343732
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3720353120373120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3731203720312030
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3732312037373033
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3733322030333432
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3831203820373120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3836342035303331
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3920323120342031
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3937322039383132
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __slab_free
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] _find_next_bit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pty_write_room
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __tcp_transmit_skb
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2035343133203934
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2038393832203334
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2039203731203631
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3431203220392035
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3531203831312030
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x54206e6f69746163
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] vma_gap_callbacks_rotate
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ip_queue_xmit
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] write
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2034312035203331
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120332037312034
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3320303536322031
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3330322033353133
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] p4d_offset
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bbe0
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc1f
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __ip_queue_xmit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __bitmap_and
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] rcu_all_qs
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __x64_sys_exit_group
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ip_local_out
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __fget_light
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_set_pte
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] malloc
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018bc8f
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_group_exit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ip_output
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] net_rx_action
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3420353638203738
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] khugepaged_enter_vma_merge
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __napi_poll
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __x64_sys_write
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_exit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ip_finish_output
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] clock_gettime
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2030353632203735
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] pud_offset.isra.0
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __ip_finish_output
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ksys_write
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] mmput
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] virtnet_poll
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] exit_mmap
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ip_finish_output2
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] receive_buf
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] vfs_write
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __split_vma
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] blk_update_request
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] dev_queue_xmit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] free_pgtables
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] new_sync_write
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] receive_mergeable
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::_Vector_base<int, std::allocator<int> >::_Vector_base
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x2036353733203737
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3120303120363120
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3132323320343132
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3531203032392033
+     0.00%     0.00%  csr_multiplicat  [unknown]            [k] 0x3837313320313335
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x000000000000c11e
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x000000000000c12c
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x0000000000022c1b
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] wmemchr
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x0000000000184893
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x000000000018b965
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x000000000012528a
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00000000001252bc
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126f5a
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __dev_queue_xmit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __vma_adjust
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] bio_endio
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] page_to_skb
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] tty_write
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] unlink_anon_vmas
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] __gnu_cxx::__alloc_traits<std::allocator<int>, int>::_S_select_on_copy
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::_Vector_base<int, std::allocator<int> >::_M_create_storage
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] 0x0000000000002450
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::locale::~locale
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __blk_mq_end_request
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __napi_alloc_skb
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __put_anon_vma
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __vma_link_rb
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] ext4_end_bio
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] file_tty_write.isra.0
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] sch_direct_xmit
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::_Vector_base<int, std::allocator<int> >::_M_allocate
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::allocator_traits<std::allocator<int> >::select_on_container_copy_construction
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x00007f7aeae56ac0
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] fopen
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __alloc_skb
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __fdget_pos
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] __rb_insert_augmented
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] bio_put
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] dev_hard_start_xmit
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_brk_flags
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] do_fault
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] flush_end_io
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] get_vma_policy.part.0
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] kmem_cache_free
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] mod_timer
+     0.00%     0.00%  csr_multiplicat  [kernel.kallsyms]    [k] n_tty_write
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::allocator<int>::allocator
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] std::allocator_traits<std::allocator<int> >::allocate
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x00007f7aeae66064
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x2034322034313231
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x2037312035312037
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3031203320312036
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3235303320383535
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3320323534312033
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3320353535203737
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3630392034353631
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3632203330313220
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x3931323120373138
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x6cc7e962e40af400
+     0.00%     0.00%  csr_multiplicat  [unknown]            [.] 0x7541006c754a006e
+     0.00%     0.00%  csr_multiplicat  libgcc_s.so.1        [.] __cpu_indicator_init
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] std::basic_filebuf<char, std::char_traits<char> >::underflow
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x0000000000126ebf
+     0.00%     0.00%  csr_multiplicat  csr_multiplication   [.] 0x000055c3e2e49450
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x00007f7aeae6e11e
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x00007f7aeae6e12c
+     0.00%     0.00%  csr_multiplicat  ld-2.31.so           [.] 0x00007f7aeae84c1b
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabed893
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4965
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4be0
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c1f
+     0.00%     0.00%  csr_multiplicat  libc-2.31.so         [.] 0x00007f7aeabf4c8f
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b28a
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9b2bc
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cebf
+     0.00%     0.00%  csr_multiplicat  libstdc++.so.6.0.28  [.] 0x00007f7aead9cf5a
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
