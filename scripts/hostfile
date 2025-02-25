@@ -1,0 +1,10 @@
+#node-1
+10.198.0.2 slots=2
+#node-2
+10.198.0.3 slots=2
+#node-3
+10.198.0.4 slots=2
+#node-4
+10.198.0.5 slots=2
+#node-5
+10.198.0.6 slots=2
