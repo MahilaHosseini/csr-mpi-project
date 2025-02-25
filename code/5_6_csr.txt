@@ -1,0 +1,3 @@
+Values: 4 3 13 18 10 
+Column_Indices: 3 3 2 4 1 
+Row_Pointers: 0 1 2 3 4 5 
